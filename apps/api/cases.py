@@ -8,6 +8,8 @@ from uuid import UUID, uuid4
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel, StringConstraints
 
+from apps.api.customers import Customer, demo_customer
+
 router = APIRouter(prefix="/cases", tags=["cases"])
 
 
@@ -52,3 +54,11 @@ def get_case(case_id: UUID, database: Annotated[Path, Depends(case_database)]) -
     if row is None:
         raise HTTPException(status_code=404, detail="Case not found")
     return Case(id=case_id, message=row[0])
+
+
+@router.get("/{case_id}/demo-customer")
+def get_demo_customer(
+    case_id: UUID, database: Annotated[Path, Depends(case_database)]
+) -> Customer:
+    get_case(case_id, database)
+    return demo_customer

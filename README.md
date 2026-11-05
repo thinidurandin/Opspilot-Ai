@@ -30,6 +30,13 @@ For local development, the API stores cases in `opspilot.sqlite3`. Set
 `OPSPILOT_CASE_DB` to use another file. This intake API has no authentication yet,
 so keep it local and use synthetic messages.
 
+## Open the demo payment history
+
+Use `GET /cases/{case_id}/demo-customer` with an existing case ID. The endpoint
+returns the same fictional Tunnel Express Car Wash account for every saved case.
+It contains two AUD 49.00 charges for the same membership period. The demo
+account and payments are sample data for testing the billing workflow.
+
 ## Run the tests
 
 ```sh
