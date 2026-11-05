@@ -43,5 +43,6 @@ GitHub Actions runs the same test command on pushes and pull requests.
 1. **API foundation** — health endpoint and automated test.
 2. **Case management** — capture and reopen enquiries locally, then add PostgreSQL, synthetic accounts, and payments.
 3. **Evidence and drafting** — upload policies and use one LangGraph workflow to classify, retrieve, look up, and draft.
-4. **Staff review** — add the Next.js dashboard, role-based permissions, approval, simulated actions, and audit logging.
-5. **Evaluation** — measure classification, retrieval, citations, safety, latency, and estimated cost on 50–100 fixed synthetic enquiries.
+4. **Staff review** — add the Next.js dashboard, role
+5. based permissions, approval, simulated actions, and audit logging.
+6. **Evaluation** — measure classification, retrieval, citations, safety, latency, and estimated cost on 50–100 fixed synthetic enquiries.
